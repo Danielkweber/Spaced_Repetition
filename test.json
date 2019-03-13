@@ -1,0 +1,22 @@
+{'Science' : [
+    {'Topic': 'Chain',
+     'reps' : 2, 
+     'Hello':'There'
+    },
+    {'Topic': 'person',
+        'reps' : 17, 
+        'Hello':'thing'
+       }
+
+],
+'Next': [
+    {'Topic': 'Chain',
+    'reps' : 2, 
+    'Hello':'There'
+   },
+   {'Topic': 'person',
+       'reps' : 17, 
+       'Hello':'thing'
+      }]}
+def encode():
+    {self.subject:[]}
