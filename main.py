@@ -1,6 +1,5 @@
 import pomodoro as ptimer
 import Repetition_log as rl
-import book_rep
 import time
 
 def option_list():
@@ -16,7 +15,13 @@ def option_list():
         time.sleep(1)
         option_list()
     if user_input == 1:
-        ptimer.pomodoro_timer(int(input('Session Length:')))
+        number_in_input = list()
+        timer_input = input('Session Length:')
+        for item in timer_input:
+            if item.isdigit():
+                number_in_input.append(item)
+        number_in_input = ''.join(number_in_input)
+        ptimer.pomodoro_timer(int(number_in_input))
     if user_input == 2:
         topic = input('Topic: ')
         subject = input('Subject: ')
