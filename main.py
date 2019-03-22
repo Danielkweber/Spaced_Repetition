@@ -1,13 +1,15 @@
 import pomodoro as ptimer
 import Repetition_log as rl
 import time
+import sys
 
 def option_list():
     print('1 - Pomodoro')
     print('2 - Add Topic')
     print('3 - List Topics')
-    print('4 - List Books')
-    user_input = input('Select Option:')
+    print('4 - Quit')
+    user_input = input('Select Option:').lower().strip()
+	
     try:
         user_input = int(user_input)
     except ValueError:
@@ -45,7 +47,9 @@ def option_list():
             if rep_after_inspect_input == 'yes':
                 rl.add_rep(int(rep_input))
             option_list()
-    elif user_input > 3:
+    if user_input == 4:
+        rl.cleanup()
+    elif int(user_input) > 4:
         print('Please input a valid option.')
         time.sleep(1)
         option_list()
