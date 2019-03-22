@@ -1,7 +1,7 @@
 import time
-import sys
 import pomodoro as ptimer
 import Repetition_log as rl
+import JsonStorage as js
 
 def option_list():
     print('1 - Pomodoro')
@@ -41,14 +41,14 @@ def option_list():
             option_list()
         if rep_input == 'list':
             option_list()
-        elif int(rep_input) in range(len(rl.object_list)):
+        elif int(rep_input) in range(len(js.object_list)):
             print(rl.inspect_object(int(rep_input)))
             rep_after_inspect_input = input('Do you want to repeat this item?').lower()
             if rep_after_inspect_input == 'yes':
                 rl.add_rep(int(rep_input))
             option_list()
     if user_input == 4:
-        rl.cleanup()
+        js.cleanup()
     elif int(user_input) > 4:
         print('Please input a valid option.')
         time.sleep(1)
