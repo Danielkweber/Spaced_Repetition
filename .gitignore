@@ -1,2 +1,4 @@
-./.vscode
-./.gitignore
+\.vscode
+\_pycache__ 
+*.pyc
+*.json
