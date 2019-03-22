@@ -3,8 +3,8 @@ import JsonStorage as js
 
 class RepLog():
     def __init__(self, topic, subject, times_reviewed = 0, dates_reviewed = [date.today().isoformat()], notes = {}, from_file = False):
-        self.topic = topic
-        self.subject = subject
+        self.topic = topic.strip()
+        self.subject = subject.strip()
         self.times_reviewed = times_reviewed
         self.dates_reviewed = dates_reviewed
         self.notes = notes
@@ -28,7 +28,7 @@ def new_topic(topic, subject):
 
 def list_topics():
     for index, item in enumerate(js.object_list):
-        print('{index}: {item}'.format(index = index, item = repr(item)))
+        print('{index}:{item}'.format(index = index, item = repr(item)))
 
 def add_rep(input):
     js.object_list[input].topic_reviewed()
