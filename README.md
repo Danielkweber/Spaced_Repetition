@@ -1,6 +1,6 @@
 # Spaced Repetition Logger
 
-The purpose of this logging application is to log the topics that the user is learning and remind the user to review the topics based on a Spaced Repetition schedule. In addition, the application includes a pomodoro timer for learning/review sessions.
+The purpose of this logging application is to log the topics that the user is learning and remind the user to review the topics based on a Spaced Repetition schedule. In addition, it includes a pomodoro timer for learning/review sessions.
 
 ## Status
 
