@@ -1,4 +1,5 @@
 \.vscode
 \_pycache__ 
+\Spaced_Rep_venv
 *.pyc
 *.json
